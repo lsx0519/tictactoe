@@ -69,8 +69,8 @@ public class QTicTacToe
 			}
 			// set starting player
 			int curPlayer = rand.nextInt(2)+1; // random
-			//            if(playOptimal)
-			//				curPlayer = 1; // player 1 always starts in the last 1000 games
+			// if(playOptimal)
+			// curPlayer = 1; // player 1 always starts in the last 1000 games
 
 			// play a single game
 			do {
@@ -135,8 +135,8 @@ public class QTicTacToe
 		if(playOptimal) {
 			if(curPlayer == 1)
 				return getMaxQAction(stateKey);  // player 1 plays best policy
-			//return randomMove(curState); // player 1 plays random
-			//return getMinQAction(stateKey); // player 1 plays worst policy
+				//return randomMove(curState); // player 1 plays random
+				//return getMinQAction(stateKey); // player 1 plays worst policy
 			else
 				//return getMinQAction(stateKey); // player 2 plays best policy
 				//return randomMove(curState); // player 2 plays random
@@ -295,13 +295,13 @@ public class QTicTacToe
 	private boolean isWinner(int[] state, int player)
 	{
 		if((state[0]==state[1] && state[1]==state[2] && state[0]==player) // horizontal
-				|| (state[3]==state[4] && state[4]==state[5] && state[3]==player) 
-				|| (state[6]==state[7] && state[7]==state[8] && state[6]==player) 
-				|| (state[0]==state[3] && state[3]==state[6] && state[0]==player) // vertical
-				|| (state[1]==state[4] && state[4]==state[7] && state[1]==player)
-				|| (state[2]==state[5] && state[5]==state[8] && state[2]==player)
-				|| (state[0]==state[4] && state[4]==state[8] && state[0]==player) // diagonal
-				|| (state[2]==state[4] && state[4]==state[6] && state[2]==player) )
+			|| (state[3]==state[4] && state[4]==state[5] && state[3]==player) 
+			|| (state[6]==state[7] && state[7]==state[8] && state[6]==player) 
+			|| (state[0]==state[3] && state[3]==state[6] && state[0]==player) // vertical
+			|| (state[1]==state[4] && state[4]==state[7] && state[1]==player)
+			|| (state[2]==state[5] && state[5]==state[8] && state[2]==player)
+			|| (state[0]==state[4] && state[4]==state[8] && state[0]==player) // diagonal
+			|| (state[2]==state[4] && state[4]==state[6] && state[2]==player) )
 			return true;
 		else
 			return false;
