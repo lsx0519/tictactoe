@@ -82,7 +82,7 @@ public class NegaMax
 		// valid moves from this board state
 		List<Integer> validMoves = new ArrayList<Integer>();
 		for(int i = 0; i < state.length; i++) {
-			if state[i] == 0)
+			if(state[i] == 0)
 				validMoves.add(i);
 		}
 		// game over
